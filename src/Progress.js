@@ -15,7 +15,8 @@ export default class Progress extends Component {
     style: PropTypes.object,
     className: PropTypes.string,
     symbolClassName: PropTypes.string,
-    type: PropTypes.string
+    type: PropTypes.string,
+    strokeColor: PropTypes.string
   }
 
   static defaultProps = {
@@ -80,7 +81,7 @@ export default class Progress extends Component {
           <Circle
             percent={percent}
             strokeWidth={circleWidth}
-            strokeColor={progressColor}
+            strokeColor={this.props.strokeColor ? this.props.strokeColor : progressColor}
             prefixClass={prefixClass}
             gapDegree={gapDeg}
             gapPosition={gapPos}
