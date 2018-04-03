@@ -37,7 +37,7 @@ export default class Progress extends Component {
       case STATUSES.ERROR:
         return <Icon name="error" size={size} />;
       default:
-        return `${this.props.percent}%`;
+        return this.props.absolute ? `${this.props.presymbol}${this.props.precent}${this.props.postsymbol}` : `${this.props.percent}%`;
     }
   }
 
